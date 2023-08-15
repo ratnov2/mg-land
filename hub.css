@@ -1,0 +1,735 @@
+@import "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;900&family=Montserrat:wght@700&display=swap";
+body {
+  background-color: #1f1f1f;
+  color: white;
+  line-height: normal;
+  font-family: "Inter", sans-serif;
+}
+body .layout {
+  width: 1128px;
+  margin: 40px auto 0 auto;
+}
+body.lock {
+  overflow: hidden;
+}
+body > section header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+body > section header .menu {
+  margin-left: auto;
+  display: none;
+  width: 20px;
+  height: 15px;
+  position: relative;
+  z-index: 11;
+}
+body > section header .menu::after, body > section header .menu::before,
+body > section header .menu span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background-color: #828282;
+}
+body > section header .menu::before {
+  content: "";
+  top: 0;
+}
+body > section header .menu::after {
+  content: "";
+  bottom: 0;
+}
+body > section header .menu span {
+  top: 50%;
+  transform: translateY(-50%);
+}
+body > section header .logo {
+  color: #fafafa;
+  font-size: 32px;
+  width: 222px;
+  font-weight: 900;
+  z-index: 11;
+}
+body > section header .logo span {
+  position: relative;
+  color: #33a9e0;
+}
+body > section header .logo span::after {
+  content: "";
+  background-color: #33a9e0;
+  border-radius: 100%;
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  top: 7px;
+  right: -6px;
+}
+body > section header.active .top-navigation {
+  background-color: #1f1f1f;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 100%;
+  z-index: 10;
+}
+body > section header.active .top-navigation ul {
+  padding-top: 120px;
+  margin-left: 16px;
+  flex-direction: column;
+}
+body > section header.active .top-navigation ul li {
+  margin-bottom: 20px;
+}
+body > section header.active .menu span {
+  transition: all 0.5s ease;
+  transform: rotate(-45deg);
+  top: 0;
+}
+body > section header.active .menu::before {
+  transition: all 0.5s ease;
+  transform: rotate(45deg);
+}
+body > section header.active .menu::after {
+  transform: rotate(-45deg);
+  display: none;
+}
+body > section header .top-navigation {
+  margin: auto;
+  transform: translateX(-111px);
+}
+body > section header .top-navigation ul {
+  width: 340px;
+  display: flex;
+  justify-content: space-between;
+}
+body > section .main {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 900px;
+}
+body > section .main > div {
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: auto 0;
+  width: 50%;
+}
+body > section .main h1 {
+  font-size: 52px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+body > section .main span {
+  color: #33a9e0;
+}
+body > section .main p {
+  color: #a4a4a4;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 145%;
+  margin-bottom: 60px;
+}
+body > section .main .button-group {
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+body > section .main .button-group button {
+  border-radius: 8px;
+  color: #2ab8fa;
+  padding: 16px 29px;
+  border: 1px solid #2ab8fa;
+}
+body > section .main .button-group > div {
+  margin-left: 24px;
+  position: relative;
+}
+body > section .main .button-group > div a {
+  color: white;
+}
+body > section .main .img {
+  position: absolute;
+  overflow: hidden;
+  right: 0;
+  width: 400px;
+  height: 900px;
+}
+body > section .main .img img {
+  position: absolute;
+}
+body > section .main .img img:first-child {
+  position: absolute;
+  right: 200px;
+  width: 156px;
+  height: 360px;
+  transform: rotateZ(-20deg);
+}
+body > section .main .img img:last-child {
+  position: absolute;
+  right: 0;
+  width: 350px;
+  height: 817px;
+  transform: rotateZ(15deg);
+}
+body > section .we-offer section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+body > section .we-offer section .effect {
+  border: 1px solid #626262;
+  border-radius: 10px;
+  width: 264px;
+  height: 203px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+body > section .we-offer section .effect img {
+  display: block;
+  margin: 46px auto 10px auto;
+}
+body > section .we-offer section .effect p {
+  text-align: center;
+}
+body > section .delivery-pay {
+  margin-top: 80px;
+}
+body > section .delivery-pay section {
+  margin: 60px 0 120px 0;
+  max-width: 700px;
+  display: flex;
+  justify-content: space-between;
+}
+body > section .delivery-pay section ul li {
+  margin-left: 14px;
+  list-style-type: disc;
+  color: #7a7a7a;
+  margin-bottom: 8px;
+}
+body > section .delivery-pay section ul li:first-child {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  margin-bottom: 18px;
+  margin-left: 0;
+  color: #2ab8fa;
+  list-style-type: none;
+}
+body > section .choise-product section {
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 20px;
+}
+body > section .choise-product section .slider {
+  display: flex;
+  overflow: hidden;
+}
+body > section .choise-product section .slider button {
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: auto;
+}
+body > section .choise-product section .slider button svg {
+  color: #4e4e4e;
+}
+body > section .choise-product section .slider button svg:hover {
+  opacity: 0.6;
+}
+body > section .choise-product section .slider .slider-line {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+body > section .choise-product section .slider .slider-item {
+  transform: translateX(0px);
+  display: flex;
+  align-items: center;
+  flex: none;
+  width: 100%;
+  padding: 0 40px;
+  transition: transform 1s ease;
+  margin-right: 40px;
+}
+body > section .choise-product section .slider .slider-item .img-group {
+  position: relative;
+  height: 500px;
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+body > section .choise-product section .slider .slider-item .img-group img:first-child {
+  position: absolute;
+  display: block;
+  max-width: 220px;
+  max-height: 550px;
+  width: auto;
+  height: auto;
+  left: 100px;
+  z-index: 2;
+}
+body > section .choise-product section .slider .slider-item .img-group img:last-child {
+  position: absolute;
+  display: block;
+  max-width: 180px;
+  max-height: 478px;
+  width: auto;
+  height: auto;
+  left: 20px;
+}
+body > section .choise-product section .slider .slider-item p {
+  color: #7a7a7a;
+  font-size: 18px;
+  font-weight: 400;
+}
+body > section .choise-product section .slider .slider-item p:last-child {
+  margin-top: 20px;
+}
+body > section .choise-product section .slider .slider-item .description {
+  width: 50%;
+  margin-left: auto;
+}
+body > section .calculate-cost {
+  position: relative;
+}
+body > section .calculate-cost section {
+  margin-top: 60px;
+}
+body > section .calculate-cost section > div > span {
+  color: #7a7a7a;
+  font-size: 18px;
+  font-weight: 400;
+}
+body > section .calculate-cost section h3 {
+  font-size: 50px;
+  font-weight: 500;
+  margin: 5px 0 30px;
+}
+body > section .calculate-cost section > div p {
+  width: 50%;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 140%;
+  opacity: 0.8;
+}
+body > section .calculate-cost section > div p:first-child {
+  margin: 5px 0 15px 0;
+}
+body > section .calculate-cost section > div p:last-child {
+  margin: 15px 0 30px 0;
+}
+body > section .calculate-cost section .line {
+  width: 40%;
+  height: 1px;
+  background-color: #4e4e4e;
+  margin: 30px 0 30px 0;
+}
+body > section .calculate-cost section .cost {
+  display: flex;
+  align-items: center;
+}
+body > section .calculate-cost section .cost span {
+  font-size: 50px;
+  font-weight: 500;
+}
+body > section .calculate-cost section .cost a {
+  color: #2ab8fa;
+  font-size: 18px;
+  font-weight: 600;
+  margin-left: 24px;
+}
+body > section .calculate-cost section .cost div {
+  display: flex;
+}
+body > section .calculate-cost section .flacon-back {
+  position: absolute;
+  top: -100px;
+  width: 290px;
+  height: 650px;
+  right: 0;
+}
+body > section .faq {
+  margin: 120px 0 200px 0;
+}
+body > section .faq section {
+  margin-top: 60px;
+  display: flex;
+}
+body > section .faq section > div {
+  width: 50%;
+}
+body > section .faq section .line {
+  width: 100%;
+  height: 1px;
+  background-color: #4e4e4e;
+  margin: 20px 0;
+}
+body > section .faq section .left-element {
+  margin-right: 50px;
+}
+body > section .faq section .left-element h4 {
+  color: #2ab8fa;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+body > section .faq section .left-element p {
+  color: #828282;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 140%;
+}
+body > section .faq section .right-element p {
+  display: none;
+}
+body > section .faq section .right-element .svg {
+  display: none;
+  color: #4e4e4e;
+}
+body > section .faq section .right-element .accordion-active {
+  color: #2ab8fa;
+  font-weight: 400;
+}
+body footer {
+  background-color: #171717;
+}
+body footer section {
+  padding: 60px 0 52px 0;
+}
+body footer section .header {
+  display: flex;
+}
+body footer section .header .logo a {
+  color: #fafafa;
+  font-size: 32px;
+  width: 222px;
+  font-weight: 900;
+}
+body footer section .header .logo a span {
+  position: relative;
+  color: #33a9e0;
+}
+body footer section .header .logo a span::after {
+  content: "";
+  background-color: #33a9e0;
+  border-radius: 100%;
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  top: 7px;
+  right: -6px;
+}
+body footer section .header .logo p {
+  margin-top: 5px;
+  color: #6d6d6d;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 140%;
+}
+body footer section .header .contacts {
+  margin-top: 39px;
+  width: 100%;
+}
+body footer section .header .contacts ul {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+body footer section .header .contacts ul li {
+  margin-top: 30px;
+  margin-right: 20px;
+}
+body footer section .header .contacts ul li h5 {
+  margin-bottom: 20px;
+  color: #2ab8fa;
+  font-size: 18px;
+  font-weight: 700;
+}
+body footer section .header .contacts ul li p {
+  color: #6d6d6d;
+  font-size: 18px;
+  font-weight: 400;
+}
+body footer section .line {
+  margin: 60px 0 20px 0;
+}
+body footer section .bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body footer section .bottom p {
+  color: #484848;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 140%;
+}
+body .line {
+  height: 1px;
+  width: 100%;
+  background-color: #484848;
+}
+body .share-title {
+  font-family: "Montserrat", sans-serif;
+  padding-left: 23px;
+  color: #2ab8fa;
+  font-size: 38px;
+  font-weight: 700;
+  position: relative;
+}
+body .share-title::after {
+  content: "";
+  width: 3px;
+  height: 34px;
+  position: absolute;
+  background-color: #a4a4a4;
+  left: 0;
+  bottom: 4px;
+}
+
+@media screen and (max-width: 1200px) {
+  body .layout {
+    width: auto;
+    margin: 40px 36px 0 36px;
+  }
+  body > section .we-offer section .effect {
+    width: 23%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  body section header .top-navigation {
+    margin: 0 0 0 auto;
+    transform: none;
+  }
+  body footer section .header {
+    flex-direction: column;
+  }
+  body footer section .header .contacts ul {
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 900px) {
+  body section .main {
+    margin-top: 50px;
+    flex-direction: column;
+    height: auto;
+  }
+  body section .main > div {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  body section .main > div br {
+    display: none;
+  }
+  body section .main .img {
+    position: relative;
+    margin: auto;
+  }
+  body section .calculate-cost section .cost {
+    width: -moz-fit-content;
+    width: fit-content;
+    align-items: baseline;
+    flex-direction: column;
+  }
+  body section .calculate-cost section .cost > div a {
+    margin-left: 0;
+  }
+  body section .choise-product section .slider .slider-item {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 700px) {
+  body > section header .menu {
+    display: block;
+  }
+  body > section header .logo {
+    font-size: 20px;
+  }
+  body > section header .top-navigation {
+    display: none;
+  }
+  body > section header .top-navigation.active {
+    display: block;
+  }
+  body > section header.active {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    align-items: baseline;
+    z-index: 15;
+    top: 0;
+    padding: 50px 16px 16px 16px;
+  }
+  body > section header.active .top-navigation {
+    overflow: auto;
+    display: block;
+  }
+  body > section header.active .menu {
+    transform: translateY(8px);
+  }
+  body > section .main h1 {
+    font-size: 24px;
+  }
+  body > section .main p {
+    font-size: 15px;
+    margin-bottom: 30px;
+  }
+  body > section .main .button-group {
+    font-size: 15px;
+  }
+  body > section .main .img {
+    height: 400px;
+    width: 100%;
+  }
+  body > section .main .img img:first-child {
+    display: block;
+    max-width: 94px;
+    max-height: 217px;
+    width: auto;
+    height: auto;
+    right: calc(50% + 50px);
+    top: 20px;
+    transform: translateX(50%) rotate(-20deg);
+  }
+  body > section .main .img img:last-child {
+    display: block;
+    max-width: 164px;
+    max-height: 395px;
+    width: auto;
+    height: auto;
+    right: 50%;
+    transform: translateX(50%) rotate(15deg);
+  }
+  body > section .calculate-cost section > div p {
+    width: 100%;
+  }
+  body > section .calculate-cost section .flacon-back {
+    display: none;
+  }
+  body > section .we-offer section {
+    margin-top: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+  body > section .we-offer section .effect {
+    background-color: transparent;
+    border: none;
+    height: auto;
+    width: 100%;
+    margin-top: 30px;
+  }
+  body > section .we-offer section .effect img {
+    margin-top: 0;
+  }
+  body > section .choise-product section .slider button {
+    margin-top: 140px;
+  }
+  body > section .choise-product section .slider .slider-item {
+    flex-direction: column;
+  }
+  body > section .choise-product section .slider .slider-item .img-group {
+    width: 100%;
+    text-align: center;
+    height: 300px;
+  }
+  body > section .choise-product section .slider .slider-item .img-group img:first-child {
+    position: static;
+    margin: auto;
+    transform: translateX(15%);
+    max-width: 128px;
+    max-height: 309px;
+  }
+  body > section .choise-product section .slider .slider-item .img-group img:last-child {
+    left: calc(50% - 90px);
+    max-width: 110px;
+    max-height: 264px;
+  }
+  body > section .choise-product section .slider .slider-item .description {
+    width: 100%;
+  }
+  body > section .share-title {
+    padding-left: 10px;
+    font-size: 20px;
+  }
+  body > section .share-title::after {
+    height: 24px;
+    top: 0px;
+  }
+  body > section .delivery-pay section {
+    margin: 40px 0 80px 0;
+  }
+  body > section .delivery-pay section ul {
+    font-size: 15px;
+  }
+  body > section .calculate-cost section {
+    margin-top: 40px;
+  }
+  body > section .calculate-cost section > div span {
+    font-size: 16px;
+  }
+  body > section .calculate-cost section > div h3 {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+  body > section .calculate-cost section > div p {
+    font-size: 15px;
+  }
+  body > section .calculate-cost section > div .cost span {
+    font-size: 24px;
+    margin: 10px 0;
+  }
+  body > section .calculate-cost section > div .cost a {
+    font-size: 15px;
+  }
+  body > section .calculate-cost section > div .cost svg {
+    color: #2ab8fa;
+  }
+  body > section .faq {
+    margin-top: 80px;
+  }
+  body > section .faq section .left-element {
+    display: none;
+  }
+  body > section .faq section .right-element {
+    width: 100%;
+  }
+  body > section .faq section .right-element p {
+    display: block;
+    overflow: hidden;
+    max-height: 0;
+    color: #828282;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 140%;
+    margin: 20px 0;
+    transition: all 0.5s ease;
+  }
+  body > section .faq section .right-element ul li {
+    transition: all 1s ease;
+  }
+  body > section .faq section .right-element ul li > div {
+    display: flex;
+    justify-content: space-between;
+  }
+  body > section .faq section .right-element ul li > div .svg {
+    display: block;
+    transition: all 1s ease;
+  }
+  body > section .faq section .right-element ul li.accordion-active div .svg {
+    transform: rotate(180deg) !important;
+    color: #2ab8fa;
+  }
+  body > section.layout {
+    margin: 50px 16px 16px 16px;
+  }
+}
+@media screen and (max-width: 500px) {
+  body > section .delivery-pay section {
+    flex-direction: column;
+  }
+  body > section .delivery-pay section ul:last-child {
+    margin-top: 40px;
+  }
+}/*# sourceMappingURL=hub.css.map */

@@ -1,11 +1,12 @@
 const menu = document.querySelector(".menu");
-const nav = document.querySelector(".top-navigation");
 const navigation = document.querySelector("header");
 
-console.log(menu);
+let isMenu = false;
+
 menu.addEventListener("click", () => {
   navigation.classList.toggle("active");
   document.body.classList.toggle("lock");
+  isMenu = !isMenu;
 });
 
 const anim = document.querySelectorAll(".right-element li");
@@ -111,3 +112,24 @@ prev.addEventListener("click", () => {
     currentItem--;
   }
 });
+
+//scroll
+
+const nav = document.querySelectorAll(".top-navigation ul li");
+
+const scrollSelectors = [];
+
+scrollSelectors[0] = document.querySelector(".main");
+scrollSelectors[1] = document.querySelector(".we-offer");
+scrollSelectors[2] = document.querySelector(".delivery-pay");
+scrollSelectors[3] = document.querySelector(".faq");
+
+for (let i = 0; i < nav.length; i++) {
+  nav[i].addEventListener("click", () => {
+    if (isMenu) {
+      navigation.classList.toggle("active");
+      document.body.classList.toggle("lock");
+    }
+    scrollSelectors[i].scrollIntoView({ behavior: "smooth" });
+  });
+}

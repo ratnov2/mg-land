@@ -134,7 +134,7 @@ body > section .main h1 {
   font-weight: 700;
   margin-bottom: 40px;
 }
-body > section .main span {
+body > section .main > span {
   color: #33a9e0;
 }
 body > section .main p {
@@ -155,7 +155,7 @@ body > section .main .button-group button {
   color: #2ab8fa;
   padding: 16px 29px;
   border: 1px solid #2ab8fa;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease;
 }
 body > section .main .button-group button:hover {
   transform: scale(1.05);
@@ -174,7 +174,7 @@ body > section .main .button-group > div a {
 body > section .main .button-group > div a span,
 body > section .main .button-group > div a svg {
   color: white;
-  transition: all 0.4s ease;
+  transition: color 0.4s ease;
 }
 body > section .main .button-group > div a:hover span,
 body > section .main .button-group > div a:hover svg {
@@ -254,11 +254,18 @@ body > section .choise-product section {
 body > section .choise-product section .slider {
   display: flex;
   overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  touch-action: pan-y;
 }
 body > section .choise-product section .slider button {
   height: -moz-fit-content;
   height: fit-content;
   margin: auto;
+  flex-basis: 40px;
+  flex-grow: 0;
+  flex-shrink: 0;
 }
 body > section .choise-product section .slider button svg {
   color: #4e4e4e;
@@ -266,10 +273,18 @@ body > section .choise-product section .slider button svg {
 body > section .choise-product section .slider button svg:hover {
   opacity: 0.6;
 }
+body > section .choise-product section .slider .slider-track {
+  width: calc(100% - 80px);
+}
+body > section .choise-product section .slider .slider-track.grab {
+  cursor: grab;
+}
+body > section .choise-product section .slider .slider-track.grabbing {
+  cursor: grabbing;
+}
 body > section .choise-product section .slider .slider-line {
   display: flex;
   width: 100%;
-  overflow: hidden;
 }
 body > section .choise-product section .slider .slider-item {
   transform: translateX(0px);
@@ -778,7 +793,7 @@ body .share-title::after {
   body footer section .header .contacts ul li span {
     font-size: 15px;
   }
-  body footer section .bottom {
+  body footer section .bottom p {
     font-size: 15px;
   }
 }
